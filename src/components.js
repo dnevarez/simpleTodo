@@ -14,7 +14,9 @@ export function Todo(props) {
 }
 
 export function TodoList(props) {                 // listens for events
+console.log(props)
   const { todos, toggleTodo, addTodo } = props;
+
 
   const onSubmit = (event) => {
     const input = event.target;
@@ -28,7 +30,8 @@ export function TodoList(props) {                 // listens for events
     }
   };
 
-  const toggleClick = id => event => toggleClick(id);
+  const toggleClick = id => event => toggleTodo(id);
+  console.log(toggleClick)
 
   return (
     <div className='todo'>
